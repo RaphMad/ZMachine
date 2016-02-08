@@ -13,7 +13,7 @@ library
    exposed-modules:     ZMachine
    build-depends:       base
    hs-source-dirs:      src\lib
-   ghc-options:         -Wall -fno-warn-unused-do-bind
+   ghc-options:         -Wall -fno-warn-unused-do-bind -fno-warn-name-shadowing
    default-language:    Haskell2010
 
 executable ZMachine
