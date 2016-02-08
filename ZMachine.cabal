@@ -1,0 +1,35 @@
+name:                   ZMachine
+version:                0.1.0.0
+synopsis:               ZMachine implementation
+description:            Virtual machine for running text based adventures
+license:                MIT
+license-file:           LICENSE
+author:                 Raphael Mader
+maintainer:             RaphMad@users.noreply.github.com
+build-type:             Simple
+cabal-version:          >= 1.22
+
+library
+   exposed-modules:     ZMachine
+   build-depends:       base
+   hs-source-dirs:      src\lib
+   ghc-options:         -Wall -fno-warn-unused-do-bind
+   default-language:    Haskell2010
+
+executable ZMachine
+   main-is:             Main.hs
+   build-depends:       base,
+                        ZMachine
+   hs-source-dirs:      src\main
+   ghc-options:         -Wall -fno-warn-unused-do-bind
+   default-language:    Haskell2010
+
+test-suite ZMachineSpec
+   type:                exitcode-stdio-1.0
+   main-is:             ZMachineSpec.hs
+   hs-source-dirs:      src\test
+   build-depends:       base,
+                        ZMachine,
+                        hspec
+   ghc-options:         -Wall -fno-warn-unused-do-bind
+   default-language:    Haskell2010
