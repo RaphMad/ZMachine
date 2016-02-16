@@ -12,7 +12,8 @@ cabal-version:          >= 1.22
 library
    exposed-modules:     ZMachine,
                         ZMachine.ZTypes
-   build-depends:       base
+   build-depends:       base,
+                        containers
    hs-source-dirs:      src\lib
    ghc-options:         -Wall -fno-warn-unused-do-bind -fno-warn-name-shadowing
    default-language:    Haskell2010
