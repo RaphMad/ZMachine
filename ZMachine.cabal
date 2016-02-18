@@ -9,6 +9,14 @@ maintainer:             RaphMad@users.noreply.github.com
 build-type:             Simple
 cabal-version:          >= 1.22
 
+executable ZMachine
+   main-is:             Main.hs
+   build-depends:       base,
+                        ZMachine
+   hs-source-dirs:      src\main
+   ghc-options:         -Wall -fno-warn-unused-do-bind
+   default-language:    Haskell2010
+
 library
    exposed-modules:     ZMachine,
                         ZMachine.ZTypes
@@ -16,14 +24,6 @@ library
                         containers
    hs-source-dirs:      src\lib
    ghc-options:         -Wall -fno-warn-unused-do-bind -fno-warn-name-shadowing
-   default-language:    Haskell2010
-
-executable ZMachine
-   main-is:             Main.hs
-   build-depends:       base,
-                        ZMachine
-   hs-source-dirs:      src\main
-   ghc-options:         -Wall -fno-warn-unused-do-bind
    default-language:    Haskell2010
 
 test-suite ZMachineSpec
